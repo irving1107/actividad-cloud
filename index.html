@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Datos Personales</h1>
+    <form id="dataForm">
+        <input type="text" id="firstName" placeholder="Nombres" required>
+        <input type="text" id="lastName" placeholder="Apellidos" required>
+        <input type="text" id="idNumber" placeholder="Número de cédula" required>
+        <input type="email" id="email" placeholder="Correo" required>
+        <input type="tel" id="phone" placeholder="Número celular" required>
+        <input type="text" id="address" placeholder="Dirección" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <!-- Cuadro modal para editar información -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Editar Información</h2>
+        <form id="editForm">
+            <input type="text" id="editFirstName" placeholder="Nombres" required>
+            <input type="text" id="editLastName" placeholder="Apellidos" required>
+            <input type="text" id="editIdNumber" placeholder="Número de cédula" required>
+            <input type="email" id="editEmail" placeholder="Correo" required>
+            <input type="tel" id="editPhone" placeholder="Número celular" required>
+            <input type="text" id="editAddress" placeholder="Dirección" required>
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+</div>
+
+
+    <div class="buttons">
+        <button id="clearTable">vaciar Tabla</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Cédula</th>
+                <th>Correo</th>
+                <th>Celular</th>
+                <th>Dirección</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
